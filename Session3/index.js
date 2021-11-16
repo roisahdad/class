@@ -19,7 +19,7 @@ app.get("/",(req,res)=>{
 app.post("/generate",async (req,res)=>{
 
     const title = req.body.title;
-    const fullpath = path.join(__dirname,"/assets"+title+".txt");
+    const fullpath = path.join(__dirname,"/assets/"+title+".txt");
     console.log(fs);
     await fs.writeFile(fullpath,"My data is "+title);
 
