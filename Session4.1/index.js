@@ -25,7 +25,7 @@ app.get("/movies", async (req,res)=>{
 
 
 
-mongoose.connect('mongodb://host.docker.internal:27017/films',
+mongoose.connect('mongodb://MongoDb:27017/films',
   {
     useNewUrlParser: true,
      
@@ -40,3 +40,6 @@ mongoose.connect('mongodb://host.docker.internal:27017/films',
         console.log("Connection Established with MongoDB on localhost:27017")
     }
     
+    
+    }
+);
