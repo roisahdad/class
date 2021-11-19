@@ -1,0 +1,20 @@
+1. Create Network
+docker network create goals-net
+
+
+2. Create MongoDB
+docker run -d --rm -v data:/data/db --network goals-net  -e MONGO_INITDB_ROOT_USERNAME=mayur -e MONGO_INITDB_ROOT_PASSWORD=secret --name mongodb mongo
+
+
+3. Create Dockerfile and the project for Node JS
+
+4. Build the Image of Node
+docker build -t goals-node .
+
+5. Run Node Image
+docker run -d --rm -e MONGODB_USERNAME=mayur -e MONGODB_PASSWORD=secret -v /home/mayur/Documents/Session5/ProjectTask/backend:/app -v /app/node_modules -p 2000:2000 --network goals-net --name goals-node-app goals-node
+
+6. Build ReactJS Image
+
+7. Run ReactJS Image
+docker run -d --rm -p 3000:3000 -it -v /home/mayur/Documents/Session5/ProjectTask/frontend/src:/app/src --name goals-react-app goals-react
