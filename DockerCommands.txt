@@ -18,6 +18,7 @@
 - docker start -ai <containername>
     start and attach to the container in the interactive mode. Take a ref  of the python script
 
+- docker inspect - provides container networking information (e.g. ifconfig)
 - docker rm <containername>
     to delete specific contain or multiple container seperated by space
 - sudo docker container prune
